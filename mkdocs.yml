@@ -1,0 +1,18 @@
+site_name: the personal page of Rechaol
+site_url: https://rechaol.github.io
+site_description: Rechaol的个人网站
+repo_name: Rechaol
+repo_url: https://github.com/Rechaol/
+edit_uri: tree/master/docs
+
+nav:
+  - 主页:
+    - index.md
+  - 短学期课程:
+    - 课程综合实践 Ⅰ:
+      - short_term/index.md
+      - 大数据可视化: short_term/data_visualization/index.md
+
+theme:
+  name: 'material'
+  language: 'zh'
