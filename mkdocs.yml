@@ -4,6 +4,103 @@ site_description: Rechaol的个人网站
 repo_name: Rechaol
 repo_url: https://github.com/Rechaol/
 edit_uri: tree/master/docs
+theme:
+    name: material
+    language: zh
+    features:
+        - content.code.annotate
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.path
+        - navigation.indexes
+        - navigation.top
+        - navigation.footer
+        - content.code.copy
+    font: false
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: blue grey
+          accent: blue grey
+          toggle:
+              icon: material/lightbulb
+              name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: black
+          accent: black
+          toggle:
+              icon: material/lightbulb-outline
+              name: Switch to light mode
+
+markdown_extensions:
+    - toc:
+          permalink: true
+          toc_depth: 5
+    - def_list
+    - attr_list
+    - md_in_html
+    - sane_lists
+    - admonition
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.snippets
+    - pymdownx.magiclink
+    - pymdownx.superfences
+    - pymdownx.inlinehilite
+    - pymdownx.smartsymbols
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+    - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+    - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+    - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+    - css/card.css
+
+extra_javascript:
+    - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/wxxcl0825
+          name: My Github Page
+        - icon: fontawesome/solid/rss
+          link: https://blog.csdn.net/qq_37638320
+          name: My CSDN Blog
+
+plugins:
+    - search
+    - git-revision-date-localized:
+          type: datetime
+          timezone: Asia/Shanghai
+          locale: zh
+          enable_creation_date: true
+    - git-committers:
+          repository: wxxcl0825/Blog
+          branch: master
+    - git-authors
 
 nav:
   - 主页:
